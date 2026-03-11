@@ -18,7 +18,7 @@ exports.startRound = async (req, res) => {
 
         // Initialize Google Generative AI client with global API key
         const genAI = new GoogleGenerativeAI(API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-002" });
 
         const prompt = `
         Based on the following details:
@@ -93,7 +93,7 @@ exports.finishRound = async (req, res) => {
 
         // Initialize with global API key
         const genAI = new GoogleGenerativeAI(API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-002" });
 
         const questionsAndAnswers = Object.entries(answers).map(([question, answer]) => ({
             spaceId,
